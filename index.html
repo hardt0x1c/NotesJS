@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it@13.0.2/dist/markdown-it.min.js" integrity="sha256-gZ3xe0BdCJplNiHWTKrm6AGZydPy34jJKZqFIf+7hIw=" crossorigin="anonymous"></script>
+    <title>NotesJS</title>
+</head>
+<body>
+    <div class="modal" tabindex="-1" role="dialog" id="editNoteModal">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Edit note</h5>
+              <span class="alert alert-danger" role="alert" id="alert">The field must not be empty!</span>
+            </div>
+            <div class="modal-body">
+              <textarea class="form-control" id="editTextArea" rows="3"></textarea>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" id="saveButton">Save changes</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" id="editClose">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="container">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+            <a href="#" class="d-flex align-items-center col-md-2 mb-2 mb-md-0 link-body-emphasis text-decoration-none">
+                <svg fill="#000000" height="40px" width="40px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M5.224,0v512h501.551V0H5.224z M36.571,31.347h313.469v62.694H36.571V31.347z M245.551,480.653H36.571V125.388h313.469 v250.776h-104.49V480.653z M276.898,407.51h50.977l-50.977,50.977V407.51z M412.735,480.653H299.063l82.324-82.324V125.388h31.347 V480.653z M412.735,94.041h-31.347V31.347h31.347V94.041z M475.429,480.653h-31.347V125.388h31.347V480.653z M475.429,94.041 h-31.347V31.347h31.347V94.041z"></path> </g> </g> </g></svg>
+                <span class="fs-4" style="padding-left: 20px;">NotesJS</span>
+            </a>
+
+            <div class="col-12 col-md-auto mb-2 justify-content-center mb-md-0"><h1>Markdown Note Editor</h1></div>
+
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a href="https://github.com/hardt0x1c" class="nav-link active" aria-current="page">Github</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://t.me/hardt0x1c" class="nav-link" aria-current="page">Telegram</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://vk.com/hate_light" class="nav-link" aria-current="page">VK</a>
+                </li>
+            </ul>
+        </header>
+    </div>
+
+    <div class="container d-flex justify-content-between">
+        <button type="button" class="btn btn-success add-button" id="add-note-btn">Add New Note</button>
+        <button type="button" class="btn btn-danger delete-button" id="delete-all-notes">Delete All Notes</button>
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="notes-container" id="notes-list"></div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

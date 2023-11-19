@@ -1,0 +1,41 @@
+.add-button {
+    margin-bottom: 20px;
+}
+
+.delete-button {
+    margin-bottom: 20px;
+}
+
+.note-box {
+    border: 1px solid #000;
+    margin-bottom: 20px;
+}
+
+.note-header {
+    background-color: #000;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.option {
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.option-img {
+    pointer-events: none;
+}
+
+.note-main {
+    padding: 10px;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+}
+
+.alert {
+    display: none;
+}
