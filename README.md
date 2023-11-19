@@ -4,4 +4,4 @@ Libraries that have been used:
 CSS: Bootstrap 5
 JS: markdown-it
 
-You can test the application [https://hardt0x1c.github.io/NotesJS/](here)
+You can test the application [here](https://hardt0x1c.github.io/NotesJS/)
